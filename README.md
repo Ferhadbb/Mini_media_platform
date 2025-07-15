@@ -1,6 +1,5 @@
 # Mini Social Network API
 
-A simple social network API built with FastAPI, PostgreSQL, and SQLAlchemy.
 
 ## Features
 
