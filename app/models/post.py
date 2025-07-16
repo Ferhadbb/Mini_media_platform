@@ -6,6 +6,7 @@ from datetime import datetime
 
 from app.core.db import Base
 
+
 class Post(Base):
     __tablename__ = "posts"
 
@@ -15,4 +16,4 @@ class Post(Base):
     owner_id = Column(UUID(as_uuid=True), ForeignKey("users.id"))
 
     owner = relationship("User", back_populates="posts")
-    likes = relationship("Like", back_populates="post", cascade="all, delete-orphan") 
+    likes = relationship("Like", back_populates="post", cascade="all, delete-orphan")

@@ -6,6 +6,7 @@ from datetime import datetime
 
 from app.core.db import Base
 
+
 class User(Base):
     __tablename__ = "users"
 
@@ -29,4 +30,4 @@ class User(Base):
         foreign_keys="[Follow.follower_id]",
         back_populates="follower",
         cascade="all, delete-orphan",
-    ) 
+    )

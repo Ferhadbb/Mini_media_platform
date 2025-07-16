@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship
 
 from app.core.db import Base
 
+
 class Like(Base):
     __tablename__ = "likes"
 
@@ -13,4 +14,4 @@ class Like(Base):
     user = relationship("User", back_populates="likes")
     post = relationship("Post", back_populates="likes")
 
-    __table_args__ = (UniqueConstraint('user_id', 'post_id', name='_user_post_uc'),) 
+    __table_args__ = (UniqueConstraint("user_id", "post_id", name="_user_post_uc"),)
